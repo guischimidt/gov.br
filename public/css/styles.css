@@ -1,0 +1,256 @@
+* {
+    font-family: Helvetica;
+    padding: 0;
+    margin: 0;
+
+    color: #111;
+}
+
+body {
+    background-color: #eee;
+}
+
+/* NAVBAR */
+
+#logo img {
+    height: 40px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 2px solid #2364b0;
+    margin-bottom: 1em;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar ul li {
+    margin-left: 1em;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+#navbar ul li a:hover {
+    color: #2364b0;
+}
+
+.fas {
+    color: #fff;
+    background-color: transparent;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    color: #2364b0;
+    padding-bottom: .3em;
+    margin-bottom: 1em;
+    border-bottom: 4px solid #2364b0;
+}
+
+h2 {
+    color: #fff;
+    background-color: transparent;
+    text-align: center;
+    padding: .5em;
+
+}
+
+/* MESSAGE */
+
+.message {
+    padding: 1em;
+    color: #fff;
+    background-color: rgb(104, 132, 255);
+    border-radius: 5px;
+    max-width: 60%;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1em;
+
+}
+
+form {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* CONTAINER */
+
+.container {
+    max-width: 90%;
+    min-height: 60vh;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.container>p {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.container-items {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container-result {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-result span {
+    font-weight: bold;
+    color: #2364b0;
+}
+
+.container-result p {
+    padding-bottom: .5em;
+    border-bottom: 1px solid #2364b0;
+    margin-bottom: .5em;
+}
+
+.back-icon {
+    margin: 0 auto;
+    margin-bottom: 1em;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #2364b0;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    transition: 0.3s;
+    border: none;
+
+}
+
+.print-icon {
+    width: 90px;
+    height: 20px;
+    color: #fff;
+    background-color: #2364b0;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 5px;
+    display: block;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+.print-icon span {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.icon {
+    margin: 0 auto;
+    width: 200px;
+    height: 190px;
+    background-color: #2364b0;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    margin-bottom: 1em;
+    text-decoration: none;
+    border-bottom: 10px solid #1a5699;
+    justify-content: center;
+
+}
+
+.icon:hover,
+.back-icon:hover,
+.print-icon:hover {
+    background-color: #0085c7;
+    border: 0;
+}
+
+select,
+input[type='month'],
+input[type='text'] {
+    margin: 0 auto;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 1px solid #2364b0;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* FOOTER */
+
+footer {
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-top: 2px solid #2364b0;
+}
+
+footer span {
+    font-weight: bold;
+    color: #2364b0;
+}
+
+/* Tabela */
+
+table.govTable {
+    border: 1px solid #2364B0;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+table.govTable td,
+table.govTable th {
+    border: 1px solid #2364B0;
+    padding: .5em .5em;
+}
+
+table.govTable tbody td {
+    font-size: .8em;
+}
+
+table.govTable tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+table.govTable thead {
+    background-color: #2364B0;
+}
+
+table.govTable thead th {
+    font-weight: bold;
+    border: 1px solid #2364B0;
+    color: #FFFFFF;
+}

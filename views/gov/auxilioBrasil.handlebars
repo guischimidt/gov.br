@@ -1,0 +1,55 @@
+<h1>Auxílio Brasil por Município</h1>
+{{#if estados}}
+<form action="/auxilio-brasil/" method="get" onchange="submit()">
+    <a href="/" class="back-icon">
+        <i class="fas fa-angle-left fa-3x"></i>
+    </a>
+    <select name="estado" id="estado">
+        <option>Estado</option>
+        {{#each estados}}
+        <option value="{{this.id}}">{{this.nome}}</option>
+        {{/each}}
+    </select>
+</form>
+{{/if}}
+
+{{#if municipios}}
+
+<form action="/auxilio-brasil/" method="get">
+    <input type="hidden" name="estado" value="{{estado}}">
+    <a href="/auxilio-brasil" class="back-icon">
+        <i class="fas fa-angle-left fa-3x"></i>
+    </a>
+    <input type="month" name="mes" id="mes" />
+    <select onchange="submit()" name="municipio" id="municipio">
+        <option>Cidade</option>
+        {{#each municipios}}
+        <option value="{{this.id}}">{{this.nome}}</option>
+        {{/each}}
+    </select>
+</form>
+{{/if}}
+
+{{#if result}}
+<div class="container-result">
+    {{#each result}}
+    <p><span>Data de Referência:</span> {{this.dataReferencia}}</p>
+    <p><span>Município:</span> {{this.municipio.nomeIBGE}}</p>
+    <p><span>Estado:</span> {{this.municipio.uf.sigla}}</p>
+    <p><span>Nº de Beneficiados:</span> {{this.quantidadeBeneficiados}}</p>
+    <p><span>Valor: </span> R$ {{this.valor}}</p>
+    {{/each}}
+    <a onclick="window.print();" class="print-icon">
+        <i class="fas fa-print"></i>
+        <span>Imprimir</span>
+    </a>
+</div>
+
+{{/if}}
+
+
+{{#if mensagem}}
+<div class="container-result">
+    <p><span>{{mensagem}}</span></p>
+</div>
+{{/if}}

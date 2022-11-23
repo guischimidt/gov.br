@@ -1,0 +1,45 @@
+<h1>Auxílio Emergencial</h1>
+{{#if result}}
+<table class="govTable">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Parcela</th>
+            <th>Mês</th>
+            <th>Enquadramento</th>
+            <th>Situação</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each result}}
+        <tr>
+            <td>{{this.beneficiario.nome}}</td>
+            <td>{{this.beneficiario.cpfFormatado}}</td>
+            <td>{{this.numeroParcela}}</td>
+            <td>{{this.mesDisponibilizacao}}</td>
+            <td>{{this.enquadramentoAuxilioEmergencial}}</td>
+            <td>{{this.situacaoAuxilioEmergencial}}</td>
+            <td>{{this.valor}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<a onclick="window.print();" class="print-icon">
+    <i class="fas fa-print"></i>
+    <span>Imprimir</span>
+</a>
+{{else}}
+
+<form action="/auxilio-emergencial/" method="get">
+    <a href="/" class="back-icon">
+        <i class="fas fa-angle-left fa-3x"></i>
+    </a>
+    <input maxlength="11" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text" name="buscaCpf"
+        id="buscaCpf" placeholder="Digite o CPF" required />
+    <button type="submit" class="back-icon">
+        <i class="fas fa-angle-right fa-3x"></i>
+    </button>
+</form>
+{{/if}}
